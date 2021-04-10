@@ -8,7 +8,7 @@
   flex-direction: column;
   position: relative;
   height: 100vh;
-  background: #f1f1f1;
+  background: $background;
   margin: 100px auto 0;
   word-break: break-all;
 }
@@ -25,11 +25,11 @@
 }
 
 .buy-my-car {
-    border: solid 2px #ad9432;
+    border: solid 2px $sellButton;
     padding: 10px;
     padding: 8px 30px;
     border-radius: 4px;
-    color: #ad9432;
+    color: $sellButton;
     font-size: 18px;
     font-weight: 600;
     transition: 0.5s background-color;
@@ -39,7 +39,7 @@
 }
 
 .buy-my-car:hover {
-    background-color: #ad9432;
+    background-color: $sellButton;
     transition: 1s background-color;
     color: white;
 }

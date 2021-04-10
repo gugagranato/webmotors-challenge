@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
-import "./tabs-styles.scss";
-import { FaCar, FaMotorcycle, FaSearch } from 'react-icons/fa'
+import { FaCar, FaMotorcycle } from 'react-icons/fa'
 import axios from "axios";
 
 import Checkbox from "../checkbox/checkbox";
-import Colors from '../../styles/colors.scss';
-
 import api from '../../services/api'
+import "./tabs-styles.scss";
 
 function Tabs() {
   const urlCities = 'https://servicodados.ibge.gov.br/api/v1/localidades/municipios';
+
   const [toggleState, setToggleState] = useState(1);
   const [cities, setCities] = useState([]);
   const [isDisabledModel, setIsDisabledModel] = useState(true)
@@ -24,9 +23,14 @@ function Tabs() {
   };
 
   useEffect(() => {
+
     axios.get(urlCities)
       .then(res => setCities(res.data))
-  }, [cities])
+
+    if (isDisabledModel) {
+      return setIsDisabledVersion(true)
+    }
+  }, [cities, isDisabledModel])
   useEffect(() => {
     api.get('/api/OnlineChallenge/Make')
       .then(res => setMakes(res.data))
