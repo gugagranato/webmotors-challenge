@@ -23,18 +23,18 @@ function Tabs() {
   };
 
   useEffect(() => {
-
-    axios.get(urlCities)
-      .then(res => setCities(res.data))
-
     if (isDisabledModel) {
       return setIsDisabledVersion(true)
     }
-  }, [cities, isDisabledModel])
+  }, [isDisabledModel])
+  useEffect(() => {
+    axios.get(urlCities)
+      .then(res => setCities(res.data))
+  }, [])
   useEffect(() => {
     api.get('/api/OnlineChallenge/Make')
       .then(res => setMakes(res.data))
-  }, [makes])
+  }, [])
 
   const handleOpportunities = (e) => {
     e.preventDefault()

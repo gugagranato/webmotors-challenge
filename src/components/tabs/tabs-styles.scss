@@ -41,7 +41,7 @@
 .buy-my-car:hover {
     background-color: $sellButton;
     transition: 1s background-color;
-    color: white;
+    color: $white;
 }
 
 // .content {
@@ -53,7 +53,7 @@
 }
 .tabs {
   display: flex;
-  color: rgb(96, 96, 96);
+  color: $disabledColor;
   font-size: 18px;
   padding: 15px;
   text-align: start;
@@ -61,7 +61,7 @@
   box-sizing: content-box;
   position: relative;
   outline: none;
-  background-color: #F2F2F2;
+  background-color: $background;
 }
 .active-tabs  {
   border-bottom: 4px solid;
@@ -72,7 +72,7 @@
     text-align: start;
   }
   .title-tab-buy {
-    color: rgb(96, 96, 96);
+    color: $disabledColor;
     font-weight: 500;
     font-size: 12px;
   }
@@ -98,15 +98,14 @@
 
 select {
   font-weight: 500;
-  color:rgb(96, 96, 96);
+  color:$disabledColor;
   padding: 10px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid $background;
   margin: 2px;
   border-radius: 4px;
 }
 
 .container-card {
-  // display: flex;
   margin-top: 60px;
   width: 100%;
   p {
@@ -115,7 +114,6 @@ select {
     font-size: 18px;
   }
   }
-  // flex-direction: row;
 }
 .card {
   display: flex;
@@ -149,7 +147,7 @@ button {
   flex-grow : 1;
 }
 .content {
-  background: white;
+  background: $white;
   padding: 20px;
   max-width: 100%;
   height: 100%;
@@ -170,11 +168,6 @@ button {
 }
 .active-content {
   display: block;
-}
-
-.inputText {
-  height: 40px;
-  border: solid #c6c6c6
 }
 
 #city {
@@ -219,7 +212,7 @@ button {
     margin: 0 10px;
     background-color: transparent;
     letter-spacing: 1px;
-    color:rgb(96, 96, 96);
+    color:$disabledColor;
   }
   
   #clear-button:hover {
