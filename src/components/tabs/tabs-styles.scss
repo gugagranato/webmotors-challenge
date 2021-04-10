@@ -1,0 +1,250 @@
+@import "../../styles/colors.scss";
+
+
+.container {
+  display: flex;  
+  margin: 0 auto;
+  max-width: 933px;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  background: #f1f1f1;
+  margin: 100px auto 0;
+  word-break: break-all;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+}
+
+.buy-my-car {
+    border: solid 2px #ad9432;
+    padding: 10px;
+    padding: 8px 30px;
+    border-radius: 4px;
+    color: #ad9432;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s background-color;
+    @media (max-width: 500px) {
+      margin-top: 60px;
+    }
+}
+
+.buy-my-car:hover {
+    background-color: #ad9432;
+    transition: 1s background-color;
+    color: white;
+}
+
+// .content {
+//   display: flex;
+//   justify-content: space-between;
+// }
+.bloc-tabs {
+  display: flex;
+}
+.tabs {
+  display: flex;
+  color: rgb(96, 96, 96);
+  font-size: 18px;
+  padding: 15px;
+  text-align: start;
+  cursor: pointer;
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+  background-color: #F2F2F2;
+}
+.active-tabs  {
+  border-bottom: 4px solid;
+    color: $primary;
+  p {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: start;
+  }
+  .title-tab-buy {
+    color: rgb(96, 96, 96);
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .title-tab-motor {
+    letter-spacing: 1.5px;
+  }
+}
+
+.icon-color {
+  margin: 4px;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+}
+
+select {
+  font-weight: 500;
+  color:rgb(96, 96, 96);
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+.container-card {
+  // display: flex;
+  margin-top: 60px;
+  width: 100%;
+  p {
+  font-size: 16px;
+  strong {
+    font-size: 18px;
+  }
+  }
+  // flex-direction: row;
+}
+.card {
+  display: flex;
+  flex: 1;
+  margin-top: 80px;
+  margin: 6px;
+  border-radius: 4px;  
+  align-items: center;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}
+
+.card img {
+  margin-right: 30px;
+}
+
+img {
+
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+
+button {
+  border: none;
+  
+}
+.content-tabs {
+  flex-grow : 1;
+}
+.content {
+  background: white;
+  padding: 20px;
+  max-width: 100%;
+  height: 100%;
+  display: none;
+}
+.content h2 {
+  padding: 0px 0 5px 0px;
+}
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+.content p {
+  width: 100%;
+  height: 100%;
+}
+.active-content {
+  display: block;
+}
+
+.inputText {
+  height: 40px;
+  border: solid #c6c6c6
+}
+
+#city {
+  width: 330px;
+}
+#radius {
+  width: 100px;
+}
+#make {
+  width: 200px;
+}
+#model {
+  width: 220px;
+}
+#version {
+  width: 330px;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 20px;
+
+  #advanced-button {
+    padding: 12px;
+    letter-spacing: 2px;
+    background-color: transparent;
+    color: $primary;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  #advanced-button:hover {
+    transition: 0.2s font-size;
+    font-size: 17px;
+  }
+  #clear-button {
+    padding: 12px;
+    margin: 0 10px;
+    background-color: transparent;
+    letter-spacing: 1px;
+    color:rgb(96, 96, 96);
+  }
+  
+  #clear-button:hover {
+    transition: 0.2s font-weight;
+    font-weight: 600;
+  }
+  #opportunities-button {
+    letter-spacing: 2px;
+    color: $white;
+    background-color: $primary;
+    text-transform: uppercase;   
+    border-radius: 2px;
+    padding: 12px;
+    margin: 0 10px;
+    width: 330px;
+    font-weight: 800;
+  }
+  #opportunities-button:hover {
+    transition: 0.5s background-color;
+    background-color: $primaryDark ;
+    border: transparent;
+  }
+  #opportunities-button:focus {
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+  }
+}

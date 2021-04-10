@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../components/header/header'
-// import { Container } from './styles';
+import Tab from '../../components/tabs/tabs';
 
 function Home() {
   return (
     <div>
       <Header />
-      <button>oi</button>
-    </div>
+      <Tab />
+    </div >
   );
 }
 
