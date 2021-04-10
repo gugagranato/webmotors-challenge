@@ -241,3 +241,17 @@ button {
     outline-offset: 0px;
   }
 }
+
+h1 {
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: $disabledDarkColor;
+  padding: 0 35px
+}
+
+h2 {
+  text-align: end;
+  font-size: large;
+  margin-top: 60px;
+  padding: 0 35px  !important;
+}
