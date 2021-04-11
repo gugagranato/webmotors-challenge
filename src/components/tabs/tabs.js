@@ -198,7 +198,10 @@ function Tabs() {
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
+          <h1>Olá,</h1>
           <h1>Como a api não suporta filtros, resolvi consumir apenas os serviçoes em formas escalonada, um dependendo do outro, e caso seja retirado o filtro, desabilito o botão</h1>
+          <h1>Também não é possível consumir os serviços no deploy, pois a api está em HTTP, e na Vercel em HTTPS, mas você pode dar uma olhada aqui: <strong>https://webmotors-challenge.vercel.app/</strong></h1>
+          <h1>O respositório é esse: https://github.com/gugagranato/webmotors-challenge</h1>
           <h1>Outro ponto foi o consumo da api de veículos quando clica no botão VER OFERTAS, que busco a primeira página e renderizo na página, além de consumir o serviço do IBGE para trazer as cidades</h1>
           <h1>Tentei usar bastante css a fim de evitar frameworks, e usei também o SASS, como é requerido para a vaga.</h1>
           <h1>Além disso, também usei um pouco de SEO, adicionando o mesmo texto do site oficial.</h1>
