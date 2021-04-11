@@ -111,12 +111,11 @@ function Tabs() {
               </div>
               <div>
                 <div className="container-city">
-
                   <FaMapMarkerAlt size={18} className="icon-city" />
                   <select id="city">
                     <option value="">&#160; &#160; &#160; &#160;Onde:</option>
                     {cities.map(city => (
-                      <option value={city.id} key={city.id}>{city.nome}</option>
+                      <option value={city.id} key={city.id}>&#160; &#160; &#160; &#160;{city.nome}</option>
                     ))}
                   </select>
                 </div>
