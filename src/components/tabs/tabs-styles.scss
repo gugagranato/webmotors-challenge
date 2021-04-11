@@ -245,6 +245,12 @@ button {
     transition: 0.2s font-size;
     font-size: 17px;
   }
+  #advanced-button:focus {
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+  }
+  
 
   .clear-opportunities-container {
     @media (max-width: 760px) {
@@ -263,6 +269,11 @@ button {
   #clear-button:hover {
     transition: 0.2s font-weight;
     font-weight: 600;
+  }
+  #clear-button:focus {
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
   }
   #opportunities-button {
     letter-spacing: 2px;
