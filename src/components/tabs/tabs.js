@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaCar, FaMotorcycle } from 'react-icons/fa'
+import { FaCar, FaMapMarkerAlt, FaMotorcycle } from 'react-icons/fa'
 import axios from "axios";
 
 import Checkbox from "../checkbox/checkbox";
@@ -110,13 +110,16 @@ function Tabs() {
                 <Checkbox label="Usado" />
               </div>
               <div>
-                <select id="city">
-                  <option value="">&#xf041; Onde:</option>
-                  {cities.map(city => (
-                    <option value={city.id} key={city.id}>{city.nome}</option>
-                  ))}
+                <div className="container-city">
 
-                </select>
+                  <FaMapMarkerAlt size={18} className="icon-city" />
+                  <select id="city">
+                    <option value="">&#160; &#160; &#160; &#160;Onde:</option>
+                    {cities.map(city => (
+                      <option value={city.id} key={city.id}>{city.nome}</option>
+                    ))}
+                  </select>
+                </div>
                 <select id="radius">
                   <option value="">Raio</option>
                   <option value="50">50</option>
