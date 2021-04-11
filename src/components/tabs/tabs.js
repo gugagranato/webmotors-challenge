@@ -26,11 +26,13 @@ function Tabs() {
     if (isDisabledModel) {
       return setIsDisabledVersion(true)
     }
-  }, [isDisabledModel])
+  }, [isDisabledModel, makes])
+
   useEffect(() => {
     axios.get(urlCities)
       .then(res => setCities(res.data))
   }, [])
+
   useEffect(() => {
     api.get('/api/OnlineChallenge/Make')
       .then(res => setMakes(res.data))
@@ -42,15 +44,6 @@ function Tabs() {
       .then(res => {
         setVehicles(res.data)
       })
-  }
-
-  const handleClearFilters = (e) => {
-    e.preventDefault();
-    setCities([])
-    setMakes([]);
-    setModels([]);
-    setVersions([]);
-    setVehicles([]);
   }
 
   const handleChangeMake = (e) => {
@@ -118,7 +111,7 @@ function Tabs() {
               </div>
               <div>
                 <select id="city">
-                  <option>&#xf041; Onde:</option>
+                  <option value="">&#xf041; Onde:</option>
                   {cities.map(city => (
                     <option value={city.id} key={city.id}>{city.nome}</option>
                   ))}
@@ -171,7 +164,7 @@ function Tabs() {
                     </button>
                 </div>
                 <div className='clear-opportunities-container'>
-                  <button id="clear-button" onClick={handleClearFilters}>Limpar filtros</button>
+                  <button type="reset" id="clear-button" >Limpar filtros</button>
                   <button id="opportunities-button" onClick={handleOpportunities}>Ver ofertas</button>
                 </div>
               </div>
