@@ -143,14 +143,14 @@ function Tabs() {
                     <option value={model.ID} key={model.ID} >{model.Name}</option>
                   )) : null}
                 </select>
-                <select disabled>
+                <select disabled id="year">
                   <option value="">Ano desejado</option>
                   <option value="50">50</option>
                   <option value="100">100</option>
                   <option defaultValue value="150">150</option>
                   <option value="200">200</option>
                 </select>
-                <select disabled>
+                <select disabled id="price">
                   <option value="">Faixa de preço</option>
                   <option value="50">50</option>
                   <option value="100">100</option>
@@ -165,12 +165,12 @@ function Tabs() {
                 </select>
               </div>
               <div className="button-container">
-                <div>
+                <div className="advanced-button-container">
                   <button id="advanced-button" type="button">
                     {'>'} Busca avançada
                     </button>
                 </div>
-                <div>
+                <div className='clear-opportunities-container'>
                   <button id="clear-button" onClick={handleClearFilters}>Limpar filtros</button>
                   <button id="opportunities-button" onClick={handleOpportunities}>Ver ofertas</button>
                 </div>

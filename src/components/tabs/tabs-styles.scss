@@ -172,18 +172,46 @@ button {
 
 #city {
   width: 330px;
+
+  @media (max-width: 620px) {
+    width: 100%;
+  }
 }
 #radius {
   width: 100px;
+  @media (max-width: 495px) {
+    width: 100%;
+  }
 }
 #make {
   width: 200px;
+  @media (max-width: 495px) {
+    width: 100%;
+  }
 }
 #model {
   width: 220px;
+  @media (max-width: 495px) {
+    width: 100%;
+  }
 }
 #version {
   width: 330px;
+  @media (max-width: 620px) {
+    width: 100%;
+  }
+}
+
+#year {
+  @media (max-width: 495px) {
+    width: 100%;
+  }
+}
+
+#price {
+  @media (max-width: 495px) {
+    width: 100%;
+  }
 }
 
 .display-flex {
@@ -194,6 +222,16 @@ button {
   display: flex;
   justify-content: space-between;
   margin: 50px 20px;
+
+  @media (max-width: 620px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .advanced-button-container {
+    display: flex;
+    justify-content: center;
+  }
 
   #advanced-button {
     padding: 12px;
@@ -206,6 +244,13 @@ button {
   #advanced-button:hover {
     transition: 0.2s font-size;
     font-size: 17px;
+  }
+
+  .clear-opportunities-container {
+    @media (max-width: 760px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
   #clear-button {
     padding: 12px;
@@ -229,6 +274,13 @@ button {
     margin: 0 10px;
     width: 330px;
     font-weight: 800;
+
+    @media (max-width: 620px) {
+      margin: 0 auto;
+    }
+    @media (max-width: 500px) {
+      width: 100%;
+    }
   }
   #opportunities-button:hover {
     transition: 0.5s background-color;
